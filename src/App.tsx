@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ButtonComp from './components/button';
+import { Container } from '@mui/material';
+import IconButtonComp from './components/iconbutton';
+import AddIcon from '@mui/icons-material/Add';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+<Container>
+<h1>Boiler Plate Components</h1>
+<ButtonComp btnType='text' btnValue="Btn1" btnClassName={"m-2"} />
+
+<ButtonComp btnType='submit' btnValue="Btn2" btnClassName={"m-2"} />
+<br/>
+<IconButtonComp iconBtncolor={"primary" } iconBtnicon={ <AddIcon /> } iconBtnlabel={"add"} />
+
+
+</Container>
+</>
   );
 }
 
